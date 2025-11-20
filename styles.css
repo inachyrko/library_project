@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ae2323;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.card {
+    background: rgb(48, 248, 65);
+    padding: 16px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.adult {
+    background: rgb(48, 248, 215);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}

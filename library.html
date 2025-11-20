@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <title>Простая библиотека на HTML</title>
+    <title>Simple library HTML</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,14 +14,14 @@
         let rows = table.getElementsByTagName("tr");
 
         for (let i = 1; i < rows.length; i++) {
-            let titleCell = rows[i].getElementsByTagName("td")[1]; // название
-            let authorCell = rows[i].getElementsByTagName("td")[2]; // автор
+            let titleCell = rows[i].getElementsByTagName("td")[1]; // name
+            let authorCell = rows[i].getElementsByTagName("td")[2]; // author
 
             if (titleCell && authorCell) {
                 let title = titleCell.textContent.toLowerCase();
                 let author = authorCell.textContent.toLowerCase();
 
-                // строка показывается если введённый текст есть в названии ИЛИ в авторе
+                // the row is shown if the entered text is found in the title OR in the author
                 if (title.includes(input) || author.includes(input)) {
                     rows[i].style.display = "";
                 } else {
@@ -59,190 +59,189 @@
 
 
 <body>
-<h1>Библиотека (статичная версия)</h1>
+<h1>Library (static version)</h1>
 
 <div class="card">
-    <h2>Взрослая литература</h2>
+    <h2>Adult Literature</h2>
 
     <label for="searchAdult"></label>
-    <input type="text" id="searchAdult" placeholder="Поиск книги...">
-    <button onclick="searchAdultBooks()">Поиск по названию или автору</button>
+    <input type="text" id="searchAdult" placeholder="Search for a book...">
+    <button onclick="searchAdultBooks()">Search by title or author</button>
 
     <table class="adult">
         <tr>
             <th>#</th>
-            <th>Название</th>
-            <th>Автор</th>
-            <th>Год</th>
-            <th>Статус</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Status</th>
         </tr>
         <tr>
-            <td>1</td><td>Мастер и Маргарита</td>
-            <td>Булгаков</td>
+            <td>1</td><td>The Master and Margarita</td>
+            <td>Bulgakov</td>
             <td>1967</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
         <tr>
-            <td>2</td><td>Преступление и наказание</td>
-            <td>Достоевский</td>
+            <td>2</td><td>Crime and Punishment</td>
+            <td>Dostoevsky</td>
             <td>1866</td>
-            <td>Выдано</td></tr>
+            <td>Checked out</td></tr>
         <tr>
             <td>3</td>
-            <td>Война и мир</td>
-            <td>Толстой</td>
+            <td>War and Peace</td>
+            <td>Tolstoy</td>
             <td>1869</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
         <tr>
             <td>4</td>
-            <td>Анна Каренина</td>
-            <td>Толстой</td>
+            <td>Anna Karenina</td>
+            <td>Tolstoy</td>
             <td>1877</td>
-            <td>Выдано</td>
+            <td>Checked out</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>Евгений Онегин</td>
-            <td>Пушкин</td>
+            <td>Eugene Onegin</td>
+            <td>Pushkin</td>
             <td>1833</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
         <tr>
             <td>6</td>
-            <td>Тихий Дон</td>
-            <td>Шолохов</td>
+            <td>And Quiet Flows the Don</td>
+            <td>Sholokhov</td>
             <td>1928</td>
-            <td>Выдано</td>
+            <td>Checked out</td>
         </tr>
         <tr>
             <td>7</td>
-            <td>Мёртвые души</td>
-            <td>Гоголь</td>
+            <td>Dead Souls</td>
+            <td>Gogol</td>
             <td>1842</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
         <tr>
             <td>8</td>
-            <td>Доктор Живаго</td>
-            <td>Пастернак</td>
+            <td>Doctor Zhivago</td>
+            <td>Pasternak</td>
             <td>1957</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
 
         <tr>
             <td>9</td>
-            <td>Отцы и дети</td>
-            <td>Тургенев</td>
+            <td>Fathers and Sons</td>
+            <td>Turgenev</td>
             <td>1862</td>
-            <td>Выдано</td>
+            <td>Checked out</td>
         </tr>
         <tr>
             <td>10</td>
-            <td>Записки современника</td>
-            <td>Чехов</td>
+            <td>Notes of a Contemporary</td>
+            <td>Chekhov</td>
             <td>1899</td>
-            <td>В наличии</td></tr>
+            <td>Available</td></tr>
     </table>
 </div>
 
 <div class="card">
-    <h2> Детская литература </h2>
+    <h2> Children's Literature </h2>
     <label for="searchChild"></label>
-    <input type="text" id="searchChild" placeholder="Поиск книги...">
-    <button onclick="searchChildBooks()">Поиск по названию или автору</button>
+    <input type="text" id="searchChild" placeholder="Search for a book...">
+    <button onclick="searchChildBooks()">Search by title or author</button>
     <table class="child">
         <tr>
-            <th>#</th>   
-            <th>книга</th>
-            <th>автор</th>
-            <th>год</th>
-            <th>Статус</th>
+            <th>#</th>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Status</th>
         </tr>
 
         <tr>
             <td>1</td>
-            <td>Груффало</td>
-            <td>Джулия Дональдсон</td>
+            <td>The Gruffalo</td>
+            <td>Julia Donaldson</td>
             <td>1999</td>
-            <td>В наличии</td>
-
+            <td>Available</td>
         </tr>
 
         <tr>
             <td>2</td>
-            <td>Хочу к маме</td>
-            <td>Джулия Дональдсон</td>
+            <td>Monkey Puzzle</td>
+            <td>Julia Donaldson</td>
             <td>2000</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
 
         <tr>
             <td>3</td>
-            <td>Верхом на помеле</td>
-            <td>Джулия Дональдсон</td>
+            <td>Room on the Broom</td>
+            <td>Julia Donaldson</td>
             <td>2002</td>
-            <td>В наличии</td>
+            <td>Available</td>
         </tr>
     </table>
 </div>
 
 <div class="card">
-    <h2>Читатели</h2>
+    <h2>Readers</h2>
     <table id="users">
         <tr>
             <th>#</th>
-            <th>Имя</th>
+            <th>Name</th>
             <th>Email</th>
         </tr>
         <tr>
             <td>1</td>
-            <td>Алексей Иванов</td>
+            <td>Aleksei Ivanov</td>
             <td>alex@example.com</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>Мария Петрова</td>
+            <td>Maria Petrova</td>
             <td>maria@example.com</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>Сергей Козлов</td>
+            <td>Sergei Kozlov</td>
             <td>sergey@example.com</td>
         </tr>
         <tr>
             <td>4</td>
-            <td>Ирина Смирнова</td>
+            <td>Irina Smirnova</td>
             <td>irina@example.com</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>Ольга Новикова</td>
+            <td>Olga Novikova</td>
             <td>olga@example.com</td>
         </tr>
         <tr>
             <td>6</td>
-            <td>Дмитрий Фёдоров</td>
+            <td>Dmitry Fyodorov</td>
             <td>dmitry@example.com</td>
         </tr>
         <tr>
             <td>7</td>
-            <td>Наталья Орлова</td>
+            <td>Natalia Orlova</td>
             <td>natasha@example.com</td>
         </tr>
         <tr>
             <td>8</td>
-            <td>Павел Морозов</td>
+            <td>Pavel Morozov</td>
             <td>pavel@example.com</td>
         </tr>
         <tr>
             <td>9</td>
-            <td>Екатерина Власова</td>
+            <td>Ekaterina Vlasova</td>
             <td>kate@example.com</td>
         </tr>
         <tr>
             <td>10</td>
-            <td>Виктор Соколов</td>
+            <td>Viktor Sokolov</td>
             <td>viktor@example.com</td>
         </tr>
     </table>

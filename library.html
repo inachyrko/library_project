@@ -5,11 +5,43 @@
     <title>Простая библиотека на HTML</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<script>
+
+    function searchAdultBooks() {
+        let input = document.getElementById("searchAdult").value.toLowerCase();
+        let table = document.querySelector(".adult");
+        let rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            let titleCell = rows[i].getElementsByTagName("td")[1]; // название
+            let authorCell = rows[i].getElementsByTagName("td")[2]; // автор
+
+            if (titleCell && authorCell) {
+                let title = titleCell.textContent.toLowerCase();
+                let author = authorCell.textContent.toLowerCase();
+
+                // строка показывается если введённый текст есть в названии ИЛИ в авторе
+                if (title.includes(input) || author.includes(input)) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
 <body>
 <h1>Библиотека (статичная версия)</h1>
 
-<div class="card adult">
+<div class="card">
     <h2>Взрослая литература</h2>
+
+    <input type="text" id="searchAdult" placeholder="Поиск книги...">
+    <button onclick="searchAdultBooks()">Поиск по названию или автору</button>
+
     <table class="adult">
         <tr>
             <th>#</th>
@@ -87,6 +119,7 @@
             <td>В наличии</td></tr>
     </table>
 </div>
+
 <div class="card">
     <h2> Детская литература </h2>
     <table>
@@ -126,7 +159,7 @@
 </div>
 
 <div class="card">
-    <h2>Пользователи</h2>
+    <h2>Читатели</h2>
     <table id="users">
         <tr>
             <th>#</th>

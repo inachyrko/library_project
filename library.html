@@ -30,6 +30,31 @@
             }
         }
     }
+    
+    function searchChildBooks() {
+        let input = document.getElementById("searchChild").value.toLowerCase();
+        let table = document.querySelector(".child");
+        let rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            let titleCell = rows[i].getElementsByTagName("td")[1]; // название
+            let authorCell = rows[i].getElementsByTagName("td")[2]; // автор
+
+            if (titleCell && authorCell) {
+                let title = titleCell.textContent.toLowerCase();
+                let author = authorCell.textContent.toLowerCase();
+
+                // строка показывается если введённый текст есть в названии ИЛИ в авторе
+                if (title.includes(input) || author.includes(input)) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+
 </script>
 
 
@@ -122,19 +147,21 @@
 
 <div class="card">
     <h2> Детская литература </h2>
-    <table>
+    <input type="text" id="searchChild" placeholder="Поиск книги...">
+    <button onclick="searchChildBooks()">Поиск по названию или автору</button>
+    <table class="child">
         <tr>
-            <th>#</th>
-            <th>автор</th>
+            <th>#</th>   
             <th>книга</th>
+            <th>автор</th>
             <th>год</th>
             <th>Статус</th>
         </tr>
 
         <tr>
             <td>1</td>
-            <td>Джулия Дональдсон</td>
             <td>Груффало</td>
+            <td>Джулия Дональдсон</td>
             <td>1999</td>
             <td>В наличии</td>
 
@@ -142,16 +169,16 @@
 
         <tr>
             <td>2</td>
-            <td>Джулия Дональдсон</td>
             <td>Хочу к маме</td>
+            <td>Джулия Дональдсон</td>
             <td>2000</td>
             <td>В наличии</td>
         </tr>
 
         <tr>
             <td>3</td>
-            <td>Джулия Дональдсон</td>
             <td>Верхом на помеле</td>
+            <td>Джулия Дональдсон</td>
             <td>2002</td>
             <td>В наличии</td>
         </tr>

@@ -17,186 +17,47 @@
 
     <label for="searchAdult"></label>
     <input type="text" id="searchAdult" placeholder="Search for a book...">
-    <button onclick="searchAdultBooks()">Search by title or author</button>
+    <button onclick="fetchBooks()">Get all books</button>
 
-    <table class="adult">
-        <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Year</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <td>1</td><td>The Master and Margarita</td>
-            <td>Bulgakov</td>
-            <td>1967</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            <td>2</td><td>Crime and Punishment</td>
-            <td>Dostoevsky</td>
-            <td>1866</td>
-            <td>Checked out</td></tr>
-        <tr>
-            <td>3</td>
-            <td>War and Peace</td>
-            <td>Tolstoy</td>
-            <td>1869</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Anna Karenina</td>
-            <td>Tolstoy</td>
-            <td>1877</td>
-            <td>Checked out</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Eugene Onegin</td>
-            <td>Pushkin</td>
-            <td>1833</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>And Quiet Flows the Don</td>
-            <td>Sholokhov</td>
-            <td>1928</td>
-            <td>Checked out</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Dead Souls</td>
-            <td>Gogol</td>
-            <td>1842</td>
-            <td>Available</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>Doctor Zhivago</td>
-            <td>Pasternak</td>
-            <td>1957</td>
-            <td>Available</td>
-        </tr>
-
-        <tr>
-            <td>9</td>
-            <td>Fathers and Sons</td>
-            <td>Turgenev</td>
-            <td>1862</td>
-            <td>Checked out</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>Notes of a Contemporary</td>
-            <td>Chekhov</td>
-            <td>1899</td>
-            <td>Available</td></tr>
-    </table>
+   <!-- Adult Books List -->
+        <div id="books-list">
+            <ul id="books">
+                <!-- Books will be dynamically populated here -->
+            </ul>
+        </div>  
 </div>
+
+
+
 
 <div class="card">
     <h2> Children's Literature </h2>
     <label for="searchChild"></label>
     <input type="text" id="searchChild" placeholder="Search for a book...">
-    <button onclick="searchChildBooks()">Search by title or author</button>
-    <table class="child">
-        <tr>
-            <th>#</th>
-            <th>Book</th>
-            <th>Author</th>
-            <th>Year</th>
-            <th>Status</th>
-        </tr>
-
-        <tr>
-            <td>1</td>
-            <td>The Gruffalo</td>
-            <td>Julia Donaldson</td>
-            <td>1999</td>
-            <td>Available</td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Monkey Puzzle</td>
-            <td>Julia Donaldson</td>
-            <td>2000</td>
-            <td>Available</td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>Room on the Broom</td>
-            <td>Julia Donaldson</td>
-            <td>2002</td>
-            <td>Available</td>
-        </tr>
-    </table>
+    <button onclick="fetchBooks()">Get all books</button>
+    
+   <!-- Children´s Books List -->
+        <div id="books-list">
+            <ul id="books">
+                <!-- Books will be dynamically populated here -->
+            </ul>
+        </div>  
 </div>
 
 <div class="card">
-    <h2>Readers</h2>
-    <table id="users">
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Aleksei Ivanov</td>
-            <td>alex@example.com</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Maria Petrova</td>
-            <td>maria@example.com</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Sergei Kozlov</td>
-            <td>sergey@example.com</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Irina Smirnova</td>
-            <td>irina@example.com</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Olga Novikova</td>
-            <td>olga@example.com</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Dmitry Fyodorov</td>
-            <td>dmitry@example.com</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Natalia Orlova</td>
-            <td>natasha@example.com</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>Pavel Morozov</td>
-            <td>pavel@example.com</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Ekaterina Vlasova</td>
-            <td>kate@example.com</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>Viktor Sokolov</td>
-            <td>viktor@example.com</td>
-        </tr>
-    </table>
+    <h2> Readers </h2>
+    <label for="searchReaders"></label>
+    <input type="text" id="searchReader" placeholder="Search for a reader...">
+    <button onclick="fetchReader()">Get all readers</button>
+    
+   <!-- Children´s Books List -->
+        <div id="readers-list">
+            <ul id="reader">
+                <!-- Readers will be dynamically populated here -->
+            </ul>
+        </div>  
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

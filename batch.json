@@ -1,0 +1,46 @@
+{
+    "mappings": [
+        {
+            "request": {
+                "method": "GET",
+                "urlPath": "/books"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "books": [
+                        {
+                            "name": "Harry Potter",
+                            "year": 1997,
+                            "author": "J. K. Rowling"
+                        },
+                        {
+                            "name": "The Hobbit",
+                            "year": 1937,
+                            "author": "J. R. R. Tolkien"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "OPTIONS",
+                "url": "/books"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                    "Access-Control-Allow-Headers": "*",
+                    "Access-Control-Max-Age": "3600"
+                }
+            }
+        }
+    ]
+}

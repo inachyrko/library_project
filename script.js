@@ -57,7 +57,7 @@ function displayBooks(booksJson) {
             if(isRmoved) {
                 ticketList.removeChild(li);
             } else {
-                alert('Failed to remove the ticket. Please try again.'); 
+                alert('Failed to remove the ticket. Please try again.');
             }
         });
         */
